@@ -8,7 +8,7 @@ ReactDOM.render(
   // <React.StrictMode>
   //   <App name="lin"/>
   // </React.StrictMode>,
-  <App name="lin"/>,
+  <App name="react-typescript"/>,
   document.getElementById('root')
 );
 

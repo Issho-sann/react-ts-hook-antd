@@ -1,6 +1,9 @@
 import React from 'react'
 import { Button } from 'antd'
 
+import styles from './.module.scss'
+import './index.scss'
+
 interface HelloProps {
     compiler: number,
     children: JSX.Element
@@ -26,8 +29,8 @@ const Hello = React.memo((props: HelloProps) => {
     const color: Color = Color.red
     return (
         <>
-            <h2>{ props.compiler }</h2>
-            <h3>{ state.name }</h3>
+            <h2 className={styles.compiler}>{ props.compiler }</h2>
+            <h3 className={styles.name}>{ state.name }</h3>
             <h4>{ state.age }</h4>
             <Button type="primary" onClick={() => setState(prev => ({...prev, age: prev.age + 1}))}>setState{color}</Button>
             { props.children }
